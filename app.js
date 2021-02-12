@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost:27017/mongo_test_queries', { useNewUrlParser: true }, function (err, db) {
+mongoose.connect('mongodb://localhost:27017/mongo_test_queries', { useNewUrlParser: true, useUnifiedTopology: true }, function (err, db) {
   if (err) {
     console.log('Unable to connect to the server. Please start the server. Error:', err);
   }
